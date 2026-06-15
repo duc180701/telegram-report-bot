@@ -14,7 +14,7 @@ today = vn_time.strftime("%d/%m/%Y")
 message = f"""
 📋 *VIẾT BÁO CÁO NGÀY HÔM NAY ĐI ĐỒ KHỐN*
 
-🗓 Datey: {today}
+🗓 Date: {today}
 ⏰ Dead Time: {DEADLINE}
 
 🔗 Mở Google Sheet.
