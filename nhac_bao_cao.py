@@ -2,9 +2,9 @@ import os
 import requests
 from datetime import datetime, timezone, timedelta
 
-BOT_TOKEN = os.environ["8562579660:AAFBMGhaCsThpAvY5Jp0Gt0E0yXoe6xk6q0"]
-CHAT_ID = os.environ["-5180038890"]
-GOOGLE_SHEET_URL = os.environ["https://docs.google.com/spreadsheets/d/1r-INxnpXdFqqTSkzcUFumThF2mLi6HkY-iOiiKalF2Y/edit?gid=677493022#gid=677493022"]
+BOT_TOKEN = os.environ["BOT_TOKEN"]
+CHAT_ID = os.environ["CHAT_ID"]
+GOOGLE_SHEET_URL = os.environ["GOOGLE_SHEET_URL"]
 
 DEADLINE = "17:30"
 
