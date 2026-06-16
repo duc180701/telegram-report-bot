@@ -1,9 +1,9 @@
 name: Send Telegram Report Reminder
 
 on:
-  schedule:
+  # schedule:
     # 09:30 UTC = 16:30 giờ Việt Nam
-    - cron: "10 10 * * *"
+    # - cron: "30 09 * * *"
   workflow_dispatch:
 
 env:
