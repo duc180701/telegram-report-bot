@@ -1,4 +1,5 @@
 import os
+import time
 import requests
 from datetime import datetime, timezone, timedelta
 
@@ -38,6 +39,32 @@ payload = {
     }
 }
 
-response = requests.post(url, json=payload)
-print(response.status_code)
-print(response.text)
+success = False
+
+for attempt in range(1, 4):
+    print(f"Attempt {attempt}/3")
+
+    try:
+        response = requests.post(
+            url,
+            json=payload,
+            timeout=30
+        )
+
+        print(response.status_code)
+        print(response.text)
+
+        if response.status_code == 200:
+            success = True
+            print("Telegram message sent successfully")
+            break
+
+    except Exception as e:
+        print(f"Error: {e}")
+
+    if attempt < 3:
+        print("Retry after 10 seconds...")
+        time.sleep(10)
+
+if not success:
+    raise Exception("Failed to send Telegram message after 3 attempts")
